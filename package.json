@@ -1,0 +1,27 @@
+{
+  "name": "nm_react",
+  "version": "1.0.0",
+  "description": "learn nm_react",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "npx parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankitsaini001/namaste-_react_practice.git"
+  },
+  "author": "Ankit Saini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankitsaini001/namaste-_react_practice/issues"
+  },
+  "homepage": "https://github.com/ankitsaini001/namaste-_react_practice#readme",
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
