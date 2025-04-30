@@ -1,76 +1,254 @@
 
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* App wrapper */
 .app {
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.app-logo img {
+  width: 7rem;
+}
+
+/* Navigation Menu */
+.nav-items {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-items li {
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-items li:hover {
+  color: #fc8019;
+}
+
+/* Body Section */
+.body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+/* Search Box */
+/* Search Container */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Search Input Box */
+.search-box {
+  width: 60%;
+  max-width: 500px;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-box:focus {
+  border-color: #fc8019;
+  box-shadow: 0 0 5px rgba(252, 128, 25, 0.4);
+}
+
+/* Search Button */
+.search-container button {
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #fc8019;
+  color: white;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #e46e0c;
+}
+
+
+/* Restaurant Cards Container */
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+/* Restaurant Card */
+.res-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.res-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.res-logo {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: #f0f0f0;
+}
+
+.res-content {
+  padding: 1rem;
+}
+
+.res-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.cuisines {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.rating-time {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.rating-time span {
+  margin-right: 0.3rem;
+}
+.filter-btn{
+  margin: 10px;
+}
+/* Filter Search Container */
+.filter-search {
+  display: flex;
+  justify-content: center; /* Center the button */
+  margin: 20px 0; /* Add some space above and below */
+}
+
+/* Filter Button */
+.filter-btn {
+  background-color: #ff6347; /* Tomato color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #e5533d; /* Slightly darker on hover */
+}
+/* Shimmer container */
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Shimmer individual card */
+.shimmer-card {
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+  background: linear-gradient(
+    to right,
+    #f0f0f0 0%,
+    #e0e0e0 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 800px 300px;
+  animation: shimmer 1s infinite linear;
+}
+
+/* Animation keyframes */
+@keyframes shimmer {
+  0% {
+    background-position: -800px 0;
   }
-  
-  /* Header layout */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #ddd;
+  100% {
+    background-position: 800px 0;
   }
-  
-  /* Logo */
-  .app-logo img {
-    width: 8.8rem;
-    height: auto;
-  }
-  
-  /* Navigation Menu */
-  .header-menu .nav-items {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header-menu .nav-items li {
-    cursor: pointer;
-    font-weight: 500;
-    transition: color 0.2s ease;
-  }
-  
-  .header-menu .nav-items li:hover {
-    color: #007acc;
-  }
-  
-  /* Body Section */
-  .body {
-    padding: 2rem;
-  }
-  
-  .search {
-    margin-bottom: 1rem;
-    font-weight: bold;
-  }
-  
+}
+/* SignUpButton.css */
+.signup-btn {
+  background-color: #ff7700; /* Swiggy orange color */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 10px;;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+.signup-btn:hover {
+  background-color: #e65c00; /* Darker orange on hover */
+}
+
+.signup-btn:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
   .res-container {
-    display: flex;
-    gap: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .res-card {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 8px;
-    width: 250px;
-    background-color: #0f0f0f0f;
-    margin-left: 2.2rem;
+    justify-content: center;
   }
 
-  .res-card:hover{
-    border: 1px solid rgb(0, 0, 0);
-    cursor: pointer;
-    box-shadow: 10px 10px #ddd;
-  }
-img.res-logo {
+  .res-card {
     width: 100%;
-    height: 200px;
+    max-width: 90%;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
