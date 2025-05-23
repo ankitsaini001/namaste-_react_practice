@@ -109,6 +109,18 @@ body {
   justify-content: flex-start;
 }
 
+/* Remove underline from entire restaurant card links */
+.res-container a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.res-container a:hover {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+
 /* Restaurant Card */
 .res-card {
   background: #fff;
@@ -134,6 +146,8 @@ body {
 
 .res-content {
   padding: 1rem;
+  text-decoration: none;
+  color: #333;
 }
 
 .res-content h3 {
@@ -237,9 +251,67 @@ body {
   outline: none;
 }
 
-.signin-btn {
-	margin: -0.4rem;
+.err{
+  text-align: center;
 }
+.err-alert{
+   font-size: 90px;
+}
+
+.header-menu li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.header-menu li a:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+.menu-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.cuisines {
+  font-style: italic;
+  color: #555;
+}
+
+.menu-title {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.menu-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.item-name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.item-price {
+  color: #2e7d32;
+  font-weight: 500;
+}
+
 
 @media (max-width: 768px) {
   .res-container {

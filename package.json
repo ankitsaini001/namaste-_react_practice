@@ -1,27 +1,32 @@
 {
-  "name": "nm_react",
+  "name": "namaste-react",
   "version": "1.0.0",
-  "description": "learn nm_react",
-  "browserslist": "> 0.5%, last 2 versions, not dead",
-  "scripts": {
-    "start": "npx parcel index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "This is Namaste React by Ankit Saini",
+  "keywords": [],
+  "homepage": "https://github.com/ankitsaini001/namaste-react#readme",
+  "bugs": {
+    "url": "https://github.com/ankitsaini001/namaste-react/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ankitsaini001/namaste-_react_practice.git"
+    "url": "git+https://github.com/ankitsaini001/namaste-react.git"
   },
-  "author": "Ankit Saini",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ankitsaini001/namaste-_react_practice/issues"
+  "author": "Ankit Saini",
+  "scripts": {
+    "start": "npx parcel index.html",
+    "build": "npx parcel build index.html",
+    "test": "jest, start"
   },
-  "homepage": "https://github.com/ankitsaini001/namaste-_react_practice#readme",
   "devDependencies": {
     "parcel": "^2.14.4"
   },
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
-  }
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^6.30.1"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
